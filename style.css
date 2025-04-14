@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1e22;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 400px;
+  width: 100%;
+  background: #2a2d31;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  background-color: #444;
+  box-shadow: 0 0 12px rgba(255,255,255,0.2);
+}
+
+.info-box {
+  background: #32353b;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.info-box h1.glow {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #5ec2ff;
+  text-shadow: 0 0 5px #5ec2ff, 0 0 10px #007be5;
+}
+
+.info-box h2 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.role {
+  font-style: italic;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.desc {
+  font-size: 14px;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+.highlight-box {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(145deg, #007be5, #005fa3);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 8px 20px rgba(0, 123, 229, 0.25), inset 0 -2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.btn:hover {
+  animation: pulse 1.5s infinite;
+  background: linear-gradient(145deg, #1caeff, #0060c1);
+  box-shadow: 0 10px 25px rgba(0, 160, 255, 0.4), 0 0 15px rgba(0,160,255,0.3);
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.primary {
+  background: linear-gradient(145deg, #33bfff, #007be5);
+}
+
+.help-box {
+  background: #007be5;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  display: block;
+}
+
+.help-title {
+  font-weight: bold;
+}
+
+.help-desc {
+  font-size: 12px;
+  color: #cde7ff;
+}
+
+.footer {
+  margin-top: 40px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  text-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.contact-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.contact-item .icon {
+  font-size: 24px;
+}
+
+/* логотип */
+.logo {
+  margin-top: 25px;
+  width: 100px;
+  opacity: 0.8;
+  filter: grayscale(100%);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 229, 0.6); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 123, 229, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 229, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delayed {
+  animation: fadeInUp 1.5s ease forwards;
+}
+.logo-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background-image: url('logo.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  filter: grayscale(100%) blur(1px);
+}
+
+.card {
+  position: relative; /* обязательно для фона */
+  z-index: 1;
+}

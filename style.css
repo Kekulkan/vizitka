@@ -8,7 +8,7 @@
 
 body {
   background-color: #1c1e22;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Akrobat', sans-serif;
   color: #f2f2f2;
   padding: 20px;
   display: flex;
@@ -149,29 +149,34 @@ body {
   color: #cde7ff;
 }
 
+/* Футер с надписью */
 .footer {
   margin-top: 30px;
-  width: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .footer h3 {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cccccc;
   margin-bottom: 10px;
-  font-weight: normal;
-  color: #dddddd;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: 0.5px;
 }
 
+/* Telegram иконка — уменьшена, центрирована */
 .telegram-btn {
-  display: inline-block;
-  font-size: 30px;
-  color: #29aee2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
   background: white;
   border-radius: 50%;
-  padding: 10px;
+  margin: 15px auto 0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
@@ -181,21 +186,22 @@ body {
   background: #e1f3ff;
 }
 
+/* Логотип на фоне — инверсный и читаемый */
 .logo-bg {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  max-width: 100%;
   height: 100%;
-  background-image: url('logo.png');
-  background-size: 90%;
+  background-image: url('logo-inverse.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  opacity: 0.06;
+  background-size: 65%;
+  opacity: 0.1;
   pointer-events: none;
   z-index: 0;
   filter: grayscale(100%) blur(1px);
+  mix-blend-mode: soft-light;
 }
 
 @keyframes pulse {
